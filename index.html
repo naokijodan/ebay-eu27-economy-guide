@@ -27,6 +27,8 @@
   .caption { text-align: center; color: #666; font-size: .88em; margin-bottom: 20px; }
   .dl { display: inline-block; background: #2e6db4; color: #fff; text-decoration: none; padding: 10px 18px; border-radius: 8px; margin: 6px 0; }
   .dl:hover { background: #1a3a6b; }
+  table.ratetable { font-size: .88em; }
+  table.ratetable td.cheapest, table.ratetable tr.cheapest td { background: #eaf5ea; font-weight: bold; }
   footer { margin-top: 60px; text-align: center; color: #888; font-size: .85em; }
   @media (max-width: 600px) { header.hero h1 { font-size: 1.25em; } .tablewrap { overflow-x: auto; } }
 </style>
@@ -76,35 +78,61 @@
 
 <h2>3. 各国への送料はどれくらい違う？（まとめ資料）</h2>
 <div class="card">
-  <p>新しい料金表（eBay SpeedPAK Economy・2026年7月30日発効）をもとに、同じ荷物を送った場合の費用を比較しました。国によって「掛かる費用」「掛からない費用」が違うので、まず0.5kgの荷物を例に、内訳を並べます。</p>
-
+  <p>新しい料金表（eBay SpeedPAK Economy・2026年7月30日発効）をもとに、同じ荷物を送った場合の費用を比較しました。ここでは数字を2つに分けて見ます。1つは<strong>基本送料</strong>（料金表そのままの金額）、もう1つは<strong>関税以外の費用総額</strong>（基本送料＋燃油サーチャージ＋固定の通関手数料。関税は含みません）です。<strong>関税だけは商品ごと・国ごとに扱いが違う</strong>ため、この記事ではすべて「別途」として切り離して考えます。</p>
   <h3>費用の内訳比較 — 何が入っていて、何が入っていないか（0.5kgの例）</h3>
   <div class="tablewrap">
   <table>
     <tr><th>費用項目</th><th class="num">アメリカ本土</th><th class="num">イギリス</th><th class="num">オーストラリア</th><th class="num">EU:ドイツ</th><th class="num">EU:フランス</th></tr>
-    <tr><td>基本送料（0.5kg）</td><td class="num">1,943円</td><td class="num">1,482円</td><td class="num">1,537円</td><td class="num">2,296円</td><td class="num">3,196円</td></tr>
+    <tr><td>基本送料（0.5kg・料金表そのまま）</td><td class="num">1,943円</td><td class="num">1,482円</td><td class="num">1,537円</td><td class="num">2,296円</td><td class="num">3,196円</td></tr>
     <tr><td>燃油サーチャージ（12%）</td><td class="num">233円</td><td class="num">178円</td><td class="num">184円</td><td class="num">276円</td><td class="num">384円</td></tr>
     <tr><td>輸入通関手数料（固定）</td><td class="num">245円</td><td class="num">なし</td><td class="num">なし</td><td class="num">なし</td><td class="num">なし</td></tr>
-    <tr><td>関税の前払い（DDP）</td><td class="num"><strong>別途</strong>（商品価格に比例 ※1）</td><td class="num">なし</td><td class="num">なし</td><td class="num">567円（定額 ※2）</td><td class="num">567円（定額 ※2）</td></tr>
+    <tr><th>関税以外の費用総額</th><th class="num">2,421円</th><th class="num">1,660円</th><th class="num">1,721円</th><th class="num">2,572円</th><th class="num">3,580円</th></tr>
+    <tr><td>関税（この表には含めない・別途）</td><td class="num"><strong>別途</strong>（商品価格に比例 ※1）</td><td class="num">なし</td><td class="num">なし</td><td class="num"><strong>別途</strong>（定額 約567円 ※2）</td><td class="num"><strong>別途</strong>（定額 約567円 ※2）</td></tr>
     <tr><td>VAT・GST・売上税</td><td colspan="5" style="text-align:center;">出品者の負担なし（eBayが購入者から徴収して納税）</td></tr>
-    <tr><th>送料の合計（アメリカの関税は別途）</th><th class="num">2,421円</th><th class="num">1,660円</th><th class="num">1,721円</th><th class="num">3,138円</th><th class="num">4,146円</th></tr>
   </table>
   </div>
   <p style="font-size:.9em; color:#555;">※1 アメリカの関税は商品価格に比例するため、表の金額には含めていません。商品ごとに計算して、シッピングポリシーで別途回収します（例: 申告価格$50・関税率15%・1ドル150円なら約1,149円）。<br>
-  ※2 EUの関税前払いは「555円／関税分類番号＋処理手数料2.1%」の定額で、商品価格には比例しません（申告価値150ユーロ以下の場合）。<br>
+  ※2 EUの関税前払いは「555円／関税分類番号＋処理手数料2.1%」の定額で、出荷時にオレンジコネックスから請求されます。商品価格には比例しません（申告価値150ユーロ以下の場合）。基本送料や燃油サーチャージとは性質が違う費用のため、この記事では送料と分けて「別途」として扱います。<br>
   ※各行は円未満を四捨五入して表示しているため、合計と±1円ずれる場合があります。</p>
   <div class="point">
     <strong>ここを間違えないでください</strong>: アメリカ向けの関税は、送料とは<strong>別計算</strong>です。表の送料に含まれていません。送料に混ぜて考えず、商品ごとに関税額を計算して、<strong>シッピングポリシー（アメリカ向けの送料欄）で別途上乗せして回収</strong>します。
   </div>
-
-  <h3>重量別の送料合計（アメリカの関税は別途）</h3>
+  <h3>重量別の送料比較（関税を除く）</h3>
+  <p style="font-size:.9em; color:#555;">諸費用込み＝基本送料＋燃油12%（アメリカのみ＋通関手数料245円）。関税は全ての国で含みません（別途）。</p>
   <div class="tablewrap">
-  <table>
-    <tr><th>重量</th><th class="num">アメリカ本土（関税別途 ※1）</th><th class="num">イギリス</th><th class="num">オーストラリア</th><th class="num">EU:ドイツ</th><th class="num">EU:フランス</th></tr>
-    <tr><td>0.1kg</td><td class="num">1,541円</td><td class="num">991円</td><td class="num">1,206円</td><td class="num">2,179円</td><td class="num">2,765円</td></tr>
-    <tr><td>0.3kg</td><td class="num">1,915円</td><td class="num">1,314円</td><td class="num">1,593円</td><td class="num">2,697円</td><td class="num">3,305円</td></tr>
-    <tr><td>0.5kg</td><td class="num">2,421円</td><td class="num">1,660円</td><td class="num">1,721円</td><td class="num">3,138円</td><td class="num">4,146円</td></tr>
-    <tr><td>1.0kg</td><td class="num">3,435円</td><td class="num">2,367円</td><td class="num">2,184円</td><td class="num">4,375円</td><td class="num">5,677円</td></tr>
+  <table class="ratetable">
+    <tr><th rowspan="2">宛先</th><th colspan="2">0.1kg</th><th colspan="2">0.3kg</th><th colspan="2">0.5kg</th><th colspan="2">1.0kg</th></tr>
+    <tr><th class="num">基本</th><th class="num">諸費用込み</th><th class="num">基本</th><th class="num">諸費用込み</th><th class="num">基本</th><th class="num">諸費用込み</th><th class="num">基本</th><th class="num">諸費用込み</th></tr>
+    <tr class="cheapest"><td>アメリカ本土48州</td><td class="num cheapest">1,157円</td><td class="num cheapest">1,541円</td><td class="num cheapest">1,491円</td><td class="num cheapest">1,915円</td><td class="num cheapest">1,943円</td><td class="num cheapest">2,421円</td><td class="num cheapest">2,848円</td><td class="num cheapest">3,435円</td></tr>
+    <tr class="cheapest"><td>イギリス</td><td class="num cheapest">885円</td><td class="num cheapest">991円</td><td class="num cheapest">1,173円</td><td class="num cheapest">1,314円</td><td class="num cheapest">1,482円</td><td class="num cheapest">1,660円</td><td class="num cheapest">2,113円</td><td class="num cheapest">2,367円</td></tr>
+    <tr class="cheapest"><td>オーストラリア</td><td class="num cheapest">1,077円</td><td class="num cheapest">1,206円</td><td class="num cheapest">1,422円</td><td class="num cheapest">1,593円</td><td class="num cheapest">1,537円</td><td class="num cheapest">1,721円</td><td class="num cheapest">1,950円</td><td class="num cheapest">2,184円</td></tr>
+    <tr><td>EU: ドイツ</td><td class="num">1,440円</td><td class="num">1,613円</td><td class="num">1,902円</td><td class="num">2,130円</td><td class="num">2,296円</td><td class="num">2,572円</td><td class="num">3,400円</td><td class="num">3,808円</td></tr>
+    <tr><td>EU: スウェーデン</td><td class="num">1,629円</td><td class="num">1,824円</td><td class="num">2,020円</td><td class="num">2,262円</td><td class="num">2,542円</td><td class="num">2,847円</td><td class="num">3,681円</td><td class="num">4,123円</td></tr>
+    <tr><td>EU: ポーランド</td><td class="num">1,610円</td><td class="num">1,803円</td><td class="num">2,088円</td><td class="num">2,339円</td><td class="num">2,781円</td><td class="num">3,115円</td><td class="num">4,168円</td><td class="num">4,668円</td></tr>
+    <tr><td>EU: ポルトガル</td><td class="num">1,784円</td><td class="num">1,998円</td><td class="num">2,221円</td><td class="num">2,488円</td><td class="num">2,832円</td><td class="num">3,172円</td><td class="num">4,154円</td><td class="num">4,652円</td></tr>
+    <tr><td>EU: スペイン</td><td class="num">1,793円</td><td class="num">2,008円</td><td class="num">2,248円</td><td class="num">2,518円</td><td class="num">2,897円</td><td class="num">3,245円</td><td class="num">4,196円</td><td class="num">4,700円</td></tr>
+    <tr><td>EU: ルーマニア</td><td class="num">1,738円</td><td class="num">1,947円</td><td class="num">2,214円</td><td class="num">2,480円</td><td class="num">2,916円</td><td class="num">3,266円</td><td class="num">4,315円</td><td class="num">4,833円</td></tr>
+    <tr><td>EU: ルクセンブルク</td><td class="num">1,979円</td><td class="num">2,216円</td><td class="num">2,384円</td><td class="num">2,670円</td><td class="num">2,952円</td><td class="num">3,306円</td><td class="num">4,063円</td><td class="num">4,551円</td></tr>
+    <tr><td>EU: ハンガリー</td><td class="num">1,810円</td><td class="num">2,027円</td><td class="num">2,289円</td><td class="num">2,564円</td><td class="num">2,988円</td><td class="num">3,347円</td><td class="num">4,386円</td><td class="num">4,912円</td></tr>
+    <tr><td>EU: オランダ</td><td class="num">2,104円</td><td class="num">2,356円</td><td class="num">2,498円</td><td class="num">2,798円</td><td class="num">3,021円</td><td class="num">3,384円</td><td class="num">4,077円</td><td class="num">4,566円</td></tr>
+    <tr><td>EU: リトアニア</td><td class="num">1,712円</td><td class="num">1,917円</td><td class="num">2,248円</td><td class="num">2,518円</td><td class="num">3,053円</td><td class="num">3,419円</td><td class="num">4,664円</td><td class="num">5,224円</td></tr>
+    <tr><td>EU: ブルガリア</td><td class="num">1,883円</td><td class="num">2,109円</td><td class="num">2,363円</td><td class="num">2,647円</td><td class="num">3,061円</td><td class="num">3,428円</td><td class="num">4,461円</td><td class="num">4,996円</td></tr>
+    <tr><td>EU: オーストリア</td><td class="num">1,942円</td><td class="num">2,175円</td><td class="num">2,412円</td><td class="num">2,701円</td><td class="num">3,088円</td><td class="num">3,459円</td><td class="num">4,441円</td><td class="num">4,974円</td></tr>
+    <tr><td>EU: イタリア</td><td class="num">1,996円</td><td class="num">2,236円</td><td class="num">2,449円</td><td class="num">2,743円</td><td class="num">3,098円</td><td class="num">3,470円</td><td class="num">4,396円</td><td class="num">4,924円</td></tr>
+    <tr><td>EU: デンマーク</td><td class="num">2,205円</td><td class="num">2,470円</td><td class="num">2,603円</td><td class="num">2,915円</td><td class="num">3,126円</td><td class="num">3,501円</td><td class="num">4,177円</td><td class="num">4,678円</td></tr>
+    <tr><td>EU: チェコ</td><td class="num">2,234円</td><td class="num">2,502円</td><td class="num">2,646円</td><td class="num">2,964円</td><td class="num">3,190円</td><td class="num">3,573円</td><td class="num">4,279円</td><td class="num">4,792円</td></tr>
+    <tr><td>EU: フランス</td><td class="num">1,963円</td><td class="num">2,199円</td><td class="num">2,445円</td><td class="num">2,738円</td><td class="num">3,196円</td><td class="num">3,580円</td><td class="num">4,563円</td><td class="num">5,111円</td></tr>
+    <tr><td>EU: アイルランド</td><td class="num">2,071円</td><td class="num">2,320円</td><td class="num">2,541円</td><td class="num">2,846円</td><td class="num">3,224円</td><td class="num">3,611円</td><td class="num">4,587円</td><td class="num">5,137円</td></tr>
+    <tr><td>EU: ベルギー</td><td class="num">2,234円</td><td class="num">2,502円</td><td class="num">2,654円</td><td class="num">2,972円</td><td class="num">3,233円</td><td class="num">3,621円</td><td class="num">4,390円</td><td class="num">4,917円</td></tr>
+    <tr><td>EU: ギリシャ</td><td class="num">1,810円</td><td class="num">2,027円</td><td class="num">2,370円</td><td class="num">2,654円</td><td class="num">3,233円</td><td class="num">3,621円</td><td class="num">4,955円</td><td class="num">5,550円</td></tr>
+    <tr><td>EU: スロバキア</td><td class="num">2,160円</td><td class="num">2,419円</td><td class="num">2,643円</td><td class="num">2,960円</td><td class="num">3,353円</td><td class="num">3,755円</td><td class="num">4,770円</td><td class="num">5,342円</td></tr>
+    <tr><td>EU: ラトビア</td><td class="num">2,032円</td><td class="num">2,276円</td><td class="num">2,567円</td><td class="num">2,875円</td><td class="num">3,374円</td><td class="num">3,779円</td><td class="num">4,984円</td><td class="num">5,582円</td></tr>
+    <tr><td>EU: スロベニア</td><td class="num">2,217円</td><td class="num">2,483円</td><td class="num">2,699円</td><td class="num">3,023円</td><td class="num">3,396円</td><td class="num">3,804円</td><td class="num">4,796円</td><td class="num">5,372円</td></tr>
+    <tr><td>EU: クロアチア</td><td class="num">2,264円</td><td class="num">2,536円</td><td class="num">2,741円</td><td class="num">3,070円</td><td class="num">3,442円</td><td class="num">3,855円</td><td class="num">4,842円</td><td class="num">5,423円</td></tr>
+    <tr><td>EU: エストニア</td><td class="num">2,352円</td><td class="num">2,634円</td><td class="num">2,882円</td><td class="num">3,228円</td><td class="num">3,691円</td><td class="num">4,134円</td><td class="num">5,303円</td><td class="num">5,939円</td></tr>
+    <tr><td>EU: フィンランド</td><td class="num">2,991円</td><td class="num">3,350円</td><td class="num">3,386円</td><td class="num">3,792円</td><td class="num">3,909円</td><td class="num">4,378円</td><td class="num">4,958円</td><td class="num">5,553円</td></tr>
+    <tr><td>EU: マルタ</td><td class="num">3,015円</td><td class="num">3,377円</td><td class="num">3,710円</td><td class="num">4,155円</td><td class="num">4,829円</td><td class="num">5,408円</td><td class="num">7,079円</td><td class="num">7,928円</td></tr>
+    <tr><td>EU: キプロス</td><td class="num">3,861円</td><td class="num">4,324円</td><td class="num">4,427円</td><td class="num">4,958円</td><td class="num">5,288円</td><td class="num">5,923円</td><td class="num">7,012円</td><td class="num">7,853円</td></tr>
   </table>
   </div>
   <div class="note">
@@ -112,10 +140,10 @@
   </div>
   <p style="color:#cc0000; font-size:1.25em; font-weight:bold; line-height:1.8; border:2px solid #cc0000; border-radius:8px; padding:14px 18px; margin:16px 0;">ある程度の重量になってくると、クーリエの方が安くなるという逆転現象がおきますので、発送時に再確認してください。また、一括シートなどで計算するときは、しばらく余裕を持った送料設定を行い、慣れてきたら、細かく設定することをお勧めします。</p>
   <ul>
-    <li><strong>イギリスが最安</strong>。オーストラリアも安めです。</li>
+    <li><strong>イギリスとオーストラリアが最安級</strong>です（0.5kgまではイギリス、1.0kgではオーストラリアが最安。いずれも関税以外の費用総額ベース）。</li>
     <li><strong>EUは国によって送料が大きく違います</strong>（ドイツが最安、キプロス・マルタは2倍前後）。</li>
-    <li><strong>キプロス・マルタ（次いでフィンランド・エストニアなど）は送料が特に高く、ヨーロッパ一律の追加送料設定では送料が赤字になる可能性があります。</strong>これらの国に売れた場合は、発送前に送料表で実費を必ず確認してください（例: 0.5kgでキプロス5,288円・マルタ4,829円）。</li>
-    <li>詳しい全27カ国×全重量帯の表は、下のExcelにまとめてあります。燃油率や為替を変えると自動で再計算されます。</li>
+    <li><strong>キプロス・マルタ（次いでフィンランド・エストニアなど）は送料が特に高く、ヨーロッパ一律の追加送料設定では送料が赤字になる可能性があります。</strong>これらの国に売れた場合は、発送前に送料表で実費を必ず確認してください（例: 0.5kgの関税以外の費用総額でキプロス5,923円・マルタ5,408円）。</li>
+    <li>詳しい全27カ国×全重量帯の表は、下のExcelにまとめてあります。燃油率を変えると自動で再計算されます。</li>
   </ul>
   <a class="dl" href="shipping-comparison-eu27-20260730.xlsx">送料比較Excel（米・英・豪・EU27）をダウンロード</a>
 </div>
