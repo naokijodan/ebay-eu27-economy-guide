@@ -29,6 +29,9 @@
   .dl:hover { background: #1a3a6b; }
   table.ratetable { font-size: .88em; }
   table.ratetable td.cheapest, table.ratetable tr.cheapest td { background: #eaf5ea; font-weight: bold; }
+  table.ratetable td:nth-child(odd):not(:first-child) { background: #fff3d6; font-weight: bold; }
+  table.ratetable tr:nth-child(2) th:nth-child(even) { background: #f6d98f; }
+  table.ratetable tr.cheapest td:nth-child(odd):not(:first-child) { background: #fff3d6; }
   footer { margin-top: 60px; text-align: center; color: #888; font-size: .85em; }
   @media (max-width: 600px) { header.hero h1 { font-size: 1.25em; } .tablewrap { overflow-x: auto; } }
 </style>
